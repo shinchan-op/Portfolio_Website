@@ -1,0 +1,244 @@
+.contact-section {
+  background-color: var(--dark-bg);
+  /* Removed cursor reference */
+}
+
+/* Removed custom cursor for links and buttons */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.terminal-window {
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--medium-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--primary-color);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--light-bg);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.terminal-button.red {
+  background-color: #ff5f56;
+}
+
+.terminal-button.yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-button.green {
+  background-color: #27c93f;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  font-family: var(--font-code);
+}
+
+.terminal-line {
+  margin-bottom: 1rem;
+}
+
+.terminal-prompt::before {
+  content: '$ ';
+  color: var(--primary-color);
+}
+
+.terminal-command {
+  color: var(--text-primary);
+}
+
+.terminal-output {
+  display: block;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  color: var(--text-secondary);
+}
+
+.contact-item {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  color: var(--primary-color);
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Tech stack logo-like elements */
+.contact-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  background-color: var(--primary-color);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* Temporarily using a fallback for missing SVG icons */
+.contact-label:nth-child(1)::before {
+  /* Removed reference to email-icon.svg */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.contact-label:nth-child(2)::before {
+  /* Removed reference to phone-icon.svg */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.contact-label:nth-child(3)::before {
+  /* Removed reference to location-icon.svg */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.contact-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: var(--font-code);
+  transition: color 0.3s ease;
+  position: relative;
+  padding-left: 25px;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.social-link:nth-child(1)::before {
+  /* Removed reference to linkedin-icon.svg */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.social-link:nth-child(2)::before {
+  /* Removed reference to github-icon.svg */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.social-link:nth-child(3)::before {
+  /* Removed reference to twitter-icon.svg */
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 992px) {
+  .terminal-window {
+    max-width: 100%;
+  }
+}
+
+.contact-form-container {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background-color: var(--medium-bg);
+  border: 1px solid var(--light-bg);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info {
+    margin-bottom: 2rem;
+  }
+}

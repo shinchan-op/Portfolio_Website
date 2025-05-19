@@ -1,0 +1,233 @@
+:root {
+  --primary-color: #00ff00; /* Terminal green */
+  --secondary-color: #0077ff;
+  --dark-bg: #0a0a0a;
+  --medium-bg: #121212;
+  --light-bg: #1e1e1e;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --font-code: 'Fira Code', monospace;
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* Update these styles at the beginning of your App.css file */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}
+
+/* Remove the !important from these selectors to avoid conflicts */
+a, button, .social-link, input, textarea, select, .project-card, .skill-name {
+  cursor: none;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+}
+
+.App {
+  min-height: 100vh;
+}
+
+section {
+  padding: 80px 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.terminal-text {
+  font-family: var(--font-code);
+  color: var(--primary-color);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+/* Skill bar styles */
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--light-bg);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  position: relative;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Project card styles */
+.project-card {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.1);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-family: var(--font-code);
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-bg);
+}
+
+/* Terminal window styles */
+.terminal-window {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 20px;
+  font-family: var(--font-code);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.terminal-button.red {
+  background-color: #ff5f56;
+}
+
+.terminal-button.yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-button.green {
+  background-color: #27c93f;
+}
+
+.terminal-body {
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.terminal-prompt::before {
+  content: '$ ';
+  color: var(--primary-color);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  background-color: var(--primary-color);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+/* Replace any animations that modify width with transform */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* For any progress bar animations, use transform instead of width */
+.skill-progress-bar {
+  height: 8px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  position: relative;
+  transform-origin: left;
+  transform: scaleX(0); /* Start at 0 width */
+  transition: transform 1.5s ease-in-out; /* Use transform instead of width */
+}
+
+/* Then set the transform when you want to show the progress */
+.skill-progress-bar.animate {
+  transform: scaleX(var(--progress-width)); /* Where --progress-width is a CSS variable set to the percentage/100 */
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

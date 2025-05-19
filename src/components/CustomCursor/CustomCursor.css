@@ -1,0 +1,55 @@
+.cursor-ring {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--primary-color);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.15s ease-out;
+  transition-property: width, height, border;
+  will-change: transform;
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width, height, background-color 0.15s ease-out;
+  will-change: transform;
+}
+
+.cursor-hidden {
+  opacity: 0;
+}
+
+.cursor-clicked {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.cursor-dot.cursor-clicked {
+  background-color: var(--primary-color);
+}
+
+.cursor-link-hovered {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.cursor-dot.cursor-link-hovered {
+  background-color: transparent;
+  width: 10px;
+  height: 10px;
+}
+
+.cursor-ring.cursor-link-hovered {
+  width: 40px;
+  height: 40px;
+  border-width: 3px;
+  border-color: var(--primary-color);
+}
