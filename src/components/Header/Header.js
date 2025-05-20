@@ -19,7 +19,7 @@ const Header = () => {
   }, [scrolled]);
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`header ${scrolled ? 'scrolled' : ''}`}>      
       <div className="container header-container">
         <div className="logo">
           <a href="#home" className="terminal-text">How are you !</a>
@@ -32,7 +32,9 @@ const Header = () => {
             <li><a href="#experience" className="nav-link">Experience</a></li>
             <li><a href="#projects" className="nav-link">Projects</a></li>
             <li><a href="#certifications" className="nav-link">Certifications</a></li>
+            <li><a href="#achievements" className="nav-link">Achievements</a></li>
             <li><a href="#contact" className="nav-link">Contact</a></li>
+            <li><a href="/resume.pdf" className="nav-link resume-link" target="_blank" rel="noopener noreferrer">Resume</a></li>
           </ul>
         </nav>
       </div>

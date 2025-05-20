@@ -67,3 +67,17 @@
     display: none;
   }
 }
+
+/* Add this to your existing Header.css file */
+.resume-link {
+  color: var(--primary-color) !important;
+  border: 1px solid var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.resume-link:hover {
+  background-color: var(--primary-color);
+  color: var(--dark-bg) !important;
+}

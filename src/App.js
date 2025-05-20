@@ -7,6 +7,7 @@ import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Certifications from './components/Certifications/Certifications';
+import Achievements from './components/Achievements/Achievements';
 import Contact from './components/Contact/Contact';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import MatrixBackground from './components/MatrixBackground/MatrixBackground';
@@ -14,8 +15,6 @@ import MatrixBackground from './components/MatrixBackground/MatrixBackground';
 function App() {
   return (
     <>
-      {/* Place MatrixBackground outside the App div */}
-     
       <div className="App">
       <MatrixBackground />
         <CustomCursor />
@@ -27,6 +26,7 @@ function App() {
           <Experience />
           <Projects />
           <Certifications />
+          <Achievements />
           <Contact />
         </main>
         <footer className="footer">

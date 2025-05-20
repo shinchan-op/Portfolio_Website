@@ -48,7 +48,11 @@ const MatrixBackground = () => {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         // Green text
+        // In the draw function, change:
         ctx.fillStyle = '#00ff00';
+        
+        // To something with better contrast against medium backgrounds:
+        ctx.fillStyle = '#00cc00'; // Slightly darker green
         ctx.font = `${fontSize}px monospace`;
         
         // Loop through each column

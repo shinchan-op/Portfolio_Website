@@ -32,6 +32,7 @@ const Hero = () => {
             Specializing in ethical hacking, penetration testing, and securing business assets.
           </p>
           <div className="hero-buttons">
+            <a href="/resume.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">Download Resume</a>
             <a href="#contact" className="btn">Contact Me</a>
             <a href="#projects" className="btn btn-secondary">View Projects</a>
           </div>

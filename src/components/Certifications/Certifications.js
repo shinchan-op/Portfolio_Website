@@ -7,43 +7,37 @@ const Certifications = () => {
       name: 'Certified Ethical Hacker (CEH)',
       issuer: 'EC-Council',
       date: 'January 2022',
-      description: 'Demonstrates knowledge of penetration testing, ethical hacking methodologies, and security assessment techniques.',
-      logo: 'ceh-logo.png' // You can add actual logos later
+      description: 'Demonstrates knowledge of penetration testing, ethical hacking methodologies, and security assessment techniques.'
     },
     {
       name: 'Certified Information Systems Security Professional (CISSP)',
       issuer: 'ISC²',
       date: 'March 2021',
-      description: 'Validates expertise in designing, implementing, and managing cybersecurity programs.',
-      logo: 'cissp-logo.png'
+      description: 'Validates expertise in designing, implementing, and managing cybersecurity programs.'
     },
     {
       name: 'Offensive Security Certified Professional (OSCP)',
       issuer: 'Offensive Security',
       date: 'June 2020',
-      description: 'Demonstrates hands-on penetration testing skills and ability to identify and exploit vulnerabilities.',
-      logo: 'oscp-logo.png'
+      description: 'Demonstrates hands-on penetration testing skills and ability to identify and exploit vulnerabilities.'
     },
     {
       name: 'Certified Information Security Manager (CISM)',
       issuer: 'ISACA',
       date: 'September 2019',
-      description: 'Focuses on information security governance, risk management, and compliance.',
-      logo: 'cism-logo.png'
+      description: 'Focuses on information security governance, risk management, and compliance.'
     },
     {
       name: 'CompTIA Security+',
       issuer: 'CompTIA',
       date: 'February 2018',
-      description: 'Covers network security, compliance, operational security, threats and vulnerabilities.',
-      logo: 'security-plus-logo.png'
+      description: 'Covers network security, compliance, operational security, threats and vulnerabilities.'
     },
     {
       name: 'Financial Risk Management (FRM)',
       issuer: 'GARP',
       date: 'November 2017',
-      description: 'Demonstrates knowledge of financial risk assessment and management principles.',
-      logo: 'frm-logo.png'
+      description: 'Demonstrates knowledge of financial risk assessment and management principles.'
     }
   ];
 
@@ -52,23 +46,22 @@ const Certifications = () => {
       <div className="container">
         <h2 className="section-title">Certifications</h2>
         
-        <div className="certifications-grid">
-          {certifications.map((cert, index) => (
-            <div className="certification-card" key={index}>
-              <div className="certification-logo">
-                {/* You can add actual logos later */}
-                <div className="logo-placeholder">{cert.name.split(' ').map(word => word[0]).join('')}</div>
-              </div>
-              <div className="certification-content">
-                <h3 className="certification-name">{cert.name}</h3>
-                <div className="certification-issuer">
-                  <span className="issuer-name">{cert.issuer}</span>
-                  <span className="certification-date">{cert.date}</span>
+        <div className="timeline-container">
+          <div className="timeline">
+            {certifications.map((cert, index) => (
+              <div className="timeline-item" key={index}>
+                <div className="timeline-dot"></div>
+                <div className="timeline-content">
+                  <div className="timeline-header">
+                    <h4 className="timeline-title">{cert.name}</h4>
+                    <span className="timeline-period">{cert.date}</span>
+                  </div>
+                  <h5 className="timeline-company">{cert.issuer}</h5>
+                  <p className="timeline-description">{cert.description}</p>
                 </div>
-                <p className="certification-description">{cert.description}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
