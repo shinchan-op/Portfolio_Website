@@ -28,7 +28,7 @@ const Header = () => {
           <ul className="nav-list">
             <li><a href="#home" className="nav-link">Home</a></li>
             <li><a href="#about" className="nav-link">About</a></li>
-            <li><a href="#skills" className="nav-link">Skills</a></li>
+            {/* Skills link removed */}
             <li><a href="#experience" className="nav-link">Experience</a></li>
             <li><a href="#projects" className="nav-link">Projects</a></li>
             <li><a href="#certifications" className="nav-link">Certifications</a></li>

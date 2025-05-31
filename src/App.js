@@ -10,13 +10,13 @@ import Certifications from './components/Certifications/Certifications';
 import Achievements from './components/Achievements/Achievements';
 import Contact from './components/Contact/Contact';
 import CustomCursor from './components/CustomCursor/CustomCursor';
-import MatrixBackground from './components/MatrixBackground/MatrixBackground';
+// MatrixBackground import removed
 
 function App() {
   return (
     <>
       <div className="App">
-      <MatrixBackground />
+        {/* MatrixBackground component removed */}
         <CustomCursor />
         <Header />
         <main>
